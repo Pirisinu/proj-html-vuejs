@@ -52,7 +52,12 @@ export default {
         :heading="'Ciao4'"
         :description="'Custom Description'"
         :buttonText="'Click Me'"
-      />
+      >
+        <template v-slot:left>
+          <p></p>
+        </template>
+      </TxtCard>
+
 
     </div>
 

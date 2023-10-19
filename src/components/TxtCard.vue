@@ -15,11 +15,16 @@ export default {
 <template>
   <div class="card-box">
     <div class="card">
-      <img :src="imageSrc" alt="Card Image" v-if="imageSrc" />
-      <h3>{{ title }}</h3>
-      <h1>{{ heading }}</h1>
-      <p>{{ description }}</p>
-      <button @click="buttonClick">{{ buttonText }}</button>
+      <div class="left">
+        <slot name="left"></slot>
+      </div>
+      <div class="content">
+        <img :src="imageSrc" alt="Card Image" v-if="imageSrc" />
+        <h3>{{ title }}</h3>
+        <h1>{{ heading }}</h1>
+        <p>{{ description }}</p>
+        <button @click="buttonClick">{{ buttonText }}</button>
+      </div>
     </div>
   </div>
 
@@ -36,6 +41,17 @@ export default {
     background-color: white;
     height: 60%;
     width: 70%;
+    display: flex;
+    .left{
+
+    }
+    .content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: space-around;
+    }
   }
 
 }
