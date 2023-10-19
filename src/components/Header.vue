@@ -47,17 +47,13 @@ export default {
 
     <!-- BOTTOM-LEFT-SIDE -->
     <div class="left">
-      <TxtCard imageSrc="" :buttonText="ButtonText">
-        <template v-slot:title>
-          <h3>Ciao</h3>
-        </template>
-        <template v-slot:heading>
-          <h1>Ciao2</h1>
-        </template>
-        <template v-slot:description>
-          <p>Custom Description</p>
-        </template>
-      </TxtCard>
+      <TxtCard
+        :title="'Ciao'"
+        :heading="'Ciao4'"
+        :description="'Custom Description'"
+        :buttonText="'Click Me'"
+      />
+
     </div>
 
     <!-- BOTTOM-RIGHT-SIDE -->

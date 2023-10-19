@@ -2,24 +2,27 @@
 export default {
   name: 'TxtCard',
   props:{
+    imageSrc: String,
     title: String,
     heading: String,
-    description: String
+    description: String,
+    buttonText: String
   }
 }
 </script>
 
 
 <template>
-<div class="card-box">
-  <div class="card">
-    <img :src="imageSrc" alt="Card Image" v-if="imageSrc" />
-    <slot name="title">Default Title</slot>
-    <slot name="heading">Default Heading</slot>
-    <slot name="description">Default Description</slot>
-    <button @click="buttonClick">{{ buttonText }}</button>
+  <div class="card-box">
+    <div class="card">
+      <img :src="imageSrc" alt="Card Image" v-if="imageSrc" />
+      <h3>{{ title }}</h3>
+      <h1>{{ heading }}</h1>
+      <p>{{ description }}</p>
+      <button @click="buttonClick">{{ buttonText }}</button>
+    </div>
   </div>
-</div>
+
 </template>
 
 <style lang="scss" scoped>
