@@ -46,10 +46,11 @@ export default {
       
       button{
         color: white;
+        font-size: 18px;
         background-color: black;
         border: 1px solid gray;
-        padding: 5px 25px;
-        margin: 40px 0;
+        padding: 7px 27px;
+        margin: 80px 0 0;
       }
       .title{
         color: rgb(161, 161, 161);
