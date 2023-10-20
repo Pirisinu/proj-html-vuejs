@@ -48,13 +48,14 @@ export default {
     <!-- BOTTOM-LEFT-SIDE -->
     <div class="left">
       <TxtCard
-        :title="'Ciao'"
-        :heading="'Ciao4'"
-        :description="'Custom Description'"
-        :buttonText="'Click Me'"
+      class="white-card"
+        :title="'the best table in town'"
+        :heading="'fine dining experience'"
+        :description="`Pellentesque vitae viverra risus, sagittis. venenatis ridiculus sclerisque nisi urna nulla. Sit tempor a et nisl, ac felis.`"
+        :buttonText="'Explore the menu'"
       >
         <template v-slot:left>
-          <p></p>
+          <span class="line"></span>
         </template>
       </TxtCard>
 

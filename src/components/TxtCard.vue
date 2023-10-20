@@ -15,14 +15,13 @@ export default {
 <template>
   <div class="card-box">
     <div class="card">
-      <div class="left">
-        <slot name="left"></slot>
-      </div>
+        <slot class="left" name="left"></slot>
+
       <div class="content">
         <img :src="imageSrc" alt="Card Image" v-if="imageSrc" />
-        <h3>{{ title }}</h3>
-        <h1>{{ heading }}</h1>
-        <p>{{ description }}</p>
+        <h3 class="title">{{ title }}</h3>
+        <h1 class="heading">{{ heading }}</h1>
+        <p class="description">{{ description }}</p>
         <button @click="buttonClick">{{ buttonText }}</button>
       </div>
     </div>
@@ -38,19 +37,38 @@ export default {
   justify-content: center;
   align-items: center;
   .card{
-    background-color: white;
     height: 60%;
-    width: 70%;
+    width: 75%;
     display: flex;
-    .left{
-
-    }
     .content{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      justify-content: space-around;
+      width: 100%;
+      color: $grey;
+      
+      button{
+        color: white;
+        background-color: black;
+        border: 1px solid gray;
+        padding: 5px 25px;
+        margin: 40px 0;
+      }
+      .title{
+        color: rgb(161, 161, 161);
+        font-weight: 300;
+      }
+      .heading{
+        font-size: 70px;
+        font-weight: 600;
+        color: $white;
+        margin: 40px 0;
+      }
+      .description{
+        font-weight: 300;
+        font-size: 20px;
+        color: rgb(161, 161, 161);
+      }
+      .title, .heading{
+        text-transform: uppercase;
+      }
     }
   }
 
