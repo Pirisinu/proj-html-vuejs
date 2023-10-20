@@ -1,6 +1,7 @@
 const menu = [
   {
     nameMenu: 'Hors d\'oeuvres',
+    image: 'mm-1.jpg',
     plate: [
       {
         namePlate: 'ahi salmon nigiri',
@@ -26,6 +27,8 @@ const menu = [
   },
   {
     nameMenu: 'main course',
+    image: '../assets/img/mm-2.jpg',
+    isSelected: true,
     plate: [
       {
         namePlate: 'braised abalon',
@@ -51,6 +54,7 @@ const menu = [
   },
   {
     nameMenu: 'desserts',
+    image: '../assets/img/mm-3.jpg',
     plate: [
       {
         namePlate: 'chocolate ball cake',

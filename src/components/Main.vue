@@ -13,11 +13,19 @@ export default {
   },
   data(){
     return{
-      mainMenu
+      mainMenu,
+      selectedCard: -1,
     }
   },
   mounted(){
     console.log(mainMenu[0]);
+  },
+  methods: {
+    selectCard(index) {
+      this.mainMenu.forEach((menu, i) => {
+        menu.isSelected = i === index;
+      });
+    },
   }
 }
 </script>
@@ -34,11 +42,14 @@ export default {
     <div></div>
   </section>
   <section class="">img+card</section> -->
-  <section>
-    <MenuCard 
+  <section class="card-container">
+    <MenuCard
       v-for="(menu, index) in mainMenu"
       :key="index"
       :menu='menu'
+      :isSelected="menu.isSelected"
+      @clickCard="selectCard(index, $event)"
+
     />
   </section>
 
@@ -53,5 +64,9 @@ export default {
 
   }
 }
-
+.card-container{
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
 </style>
