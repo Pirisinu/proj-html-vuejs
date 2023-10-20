@@ -47,7 +47,7 @@ export default {
 
 footer{
   .img-back{
-    height: 900px;
+    height: 660px;
     width: 100%;
     background-image: url('../assets/img/footer2x.jpg');
     background-position: center;
@@ -66,7 +66,7 @@ footer{
       text-align: center;
 
       .footer-logo{
-        height: 120px;
+        height: 80px;
         img{
           width: 100%;
           height: 100%;
@@ -74,7 +74,8 @@ footer{
         }
       }
       p{
-        font-size: 2.1rem;
+        font-size: 18px;
+  
       }
       .icon-container{
         display: flex;
@@ -82,16 +83,16 @@ footer{
 
         .cercle-box{
           border-radius: 50%;
-          height: 70px;
-          width: 70px;
-          margin: 6px;
+          height: 50px;
+          width: 50px;
+          margin: 10px;
           background-color: $white;
           display: flex;
           justify-content: center;
           color: $black;
           i{
-            font-size: 2.5rem;
-            line-height: 85px;
+            font-size: 1.5rem;
+            line-height: 58px;
           }
         }
       }
