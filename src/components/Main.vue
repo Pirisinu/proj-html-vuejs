@@ -1,15 +1,15 @@
 <script>
-import TxtCard from './TxtCard.vue';
 import mainMenu from '../data/mainMenu.js';
+import TxtCard from './TxtCard.vue';
 import MenuCard from './MenuCard.vue';
-import CriticsCard from './CriticsCard.vue'; 
+import NewsPromCard from './NewsPromCard.vue'; 
 
 export default {
   name: 'Main',
   components:{
     TxtCard,
     MenuCard,
-    CriticsCard
+    NewsPromCard
   },
   data(){
     return{
@@ -17,7 +17,7 @@ export default {
     }
   },
   mounted(){
-    console.log(mainMenu);
+    console.log(mainMenu[0]);
   }
 }
 </script>
@@ -32,10 +32,14 @@ export default {
       </div>
     </div>
     <div></div>
-  </section> -->
-  <section class="">img+card</section>
+  </section>
+  <section class="">img+card</section> -->
   <section>
-
+    <MenuCard 
+      v-for="(menu, index) in mainMenu"
+      :key="index"
+      :menu='menu'
+    />
   </section>
 
 </template>
