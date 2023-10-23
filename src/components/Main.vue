@@ -13,6 +13,7 @@ import CriticsCard from './card/CriticsCard.vue';
 /* SECTION IMPORT */
 import SectionFoodExperience from './section/SectionFoodExperience.vue';
 import SectionAboutMenu from './section/AboutMenu.vue';
+import SectionCritics from './section/SectionCritics.vue';
 import SectionPlateImg from './section/SectionPlateImg.vue';
 import SectionAboutTakeout from './section/AboutTakeout.vue';
 import SectionNewsProm from './section/SectionNewsProm.vue';
@@ -30,6 +31,7 @@ export default {
     /* SECTION */
     SectionFoodExperience,
     SectionAboutMenu,
+    SectionCritics,
     SectionPlateImg,
     SectionAboutTakeout,
     SectionNewsProm,
@@ -58,14 +60,10 @@ export default {
   <SectionFoodExperience />
   <!-- SECTION ABOUT MENU -->
   <SectionAboutMenu />
+  <!-- SECTION CRITICS -->
+  <SectionCritics />
   <!-- SECTION IMG PLATE -->
   <SectionPlateImg />
-
-  <!-- SECTION CRITICTS -->
-  <section class="critics">
-
-  </section>
-
   <!-- SECTION NEWS PROM -->
   <section>
     <h2>Latest news & promotions</h2>

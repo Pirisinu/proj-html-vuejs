@@ -51,7 +51,7 @@ section.food-experience{
     .img-cont{
       height: 600px;
       width: 400px;
-      background-image: url(/info22x.jpg);
+      background: linear-gradient(rgba(0,0,0,.1) 80% , rgba(0,0,0,.8) 95%), url('/info22x.jpg');
       background-size: cover;
       background-position: center;
       display: flex;
@@ -67,9 +67,6 @@ section.food-experience{
         text-transform: uppercase;
         font-size: .9rem;
         margin-bottom: 10px;
-        background-color: rgba(0, 0, 0, .5);
-        padding: 3px;
-        border-radius: 3px;
       }
     }
   }
