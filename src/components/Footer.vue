@@ -43,7 +43,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../scss/main.scss' as *;
+
 
 footer{
   .img-back{
@@ -55,7 +55,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $white;
+    color: white;
 
     .footer-container{
       height: 50%;
@@ -84,10 +84,10 @@ footer{
           height: 50px;
           width: 50px;
           margin: 10px;
-          background-color: $white;
+          background-color: white;
           display: flex;
           justify-content: center;
-          color: $black;
+          color: black;
           i{
             font-size: 1.5rem;
             line-height: 58px;
@@ -98,8 +98,8 @@ footer{
   }
   .bottom{
     height: 75px;
-    background-color: $black;
-    color: $white;
+    background-color: black;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;

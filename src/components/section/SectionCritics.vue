@@ -25,16 +25,16 @@ export default {
     <div class="container-ltl-card">
       <CriticsCard 
       class="ltl-card mary"
-      :name="'name'"
-      :heading="'heading'"
-      :description="'description'"
+      :name="'mary maxey'"
+      :heading="'the guardian'"
+      :description="'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua et dolore magna aliqua et dolore magna al Lorem ipsum dolor sit amet, consect et aL S'"
       :buttonText="'Read full article'"
       />
       <CriticsCard 
       class="ltl-card patrick"
-      :name="'name'"
-      :heading="'heading'"
-      :description="'description'"
+      :name="'patrick monroe'"
+      :heading="'globe and mail'"
+      :description="'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua et dolore magna aliqua et dolore magna al Lorem ipsum dolor sit amet, consect et aL S'"
       :buttonText="'Read full article'"
       />
     </div>
