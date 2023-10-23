@@ -14,7 +14,7 @@ export default {
 /* PLATE-EXAMPLE */
 section.plate-example{
   height: 700px;
-  background-image: url('../../public/page52x.jpg');
+  background-image: url('/page52x.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
