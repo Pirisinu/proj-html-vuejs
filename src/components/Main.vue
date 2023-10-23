@@ -100,6 +100,10 @@ export default {
     </div>
   </section>
 
+  <section>
+    <SliderComp :sliderData="sliderData2"/>
+  </section>
+
   <!-- SECTION MENU -->
   <section class="menu-card-container">
     <MenuCard
@@ -113,7 +117,7 @@ export default {
   </section>
 
   <section>
-    <SliderComp/>
+    <SliderComp :sliderData="sliderData"/>
   </section>
 </template>
 

@@ -42,7 +42,6 @@ export default {
         :ltlPrice="currentSlide.price"
         :description="currentSlide.content"
         :buttonText=" currentSlide.buttonText"
-        
         />
 
       </div>
@@ -70,7 +69,7 @@ export default {
   .card-overlay {
     position: absolute;
     top: 0;
-    left: 200px;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -82,7 +81,7 @@ export default {
       padding: 10px 20px;
       height: 80%;
       width: 450px;
-      
+      margin-left: 220px;
     }
   }
 
