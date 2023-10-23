@@ -4,11 +4,12 @@ import mainMenu from '../data/mainMenu.js';
 import ltlCard from '../data/mainMenu.js'
 
 /* COMPONENTS */
-import LtlCard from './LtlCard.vue';
-import TxtCard from './TxtCard.vue';
+import LtlCard from './card/LtlCard.vue';
+import TxtCard from './card/TxtCard.vue';
 import MenuCard from './MenuCard.vue';
-import NewsPromCard from './NewsPromCard.vue';
-import SliderComp from './SliderComp.vue'; 
+import NewsPromCard from './card/NewsPromCard.vue';
+import SliderComp from './SliderComp.vue';
+import CriticsCardVue from './card/CriticsCard.vue';
 
 export default {
   name: 'Main',
@@ -22,7 +23,6 @@ export default {
   data(){
     return{
       mainMenu,
-      selectedCard: -1,
       ltlCard
     }
   },
@@ -80,6 +80,35 @@ export default {
     </div>
   </section>
 
+  <!-- SECTION IMG PLATE -->
+  <section class="plate-example">
+    <p>KUNG PAO CHICKEN - $32</p>
+  </section>
+
+  <!-- SECTION NEWS PROM -->
+  <section>
+    <h2>Latest news & promotions</h2>
+    <div class="line"></div>
+
+    <div class="news-prom">
+      <NewsPromCard 
+      :imageSrc="'/img-caffe.jpg'"
+      :title="'the best coffee in town'"
+      :description="'by admin  January 7th, 2020  Categories: News'"
+      />
+      <NewsPromCard 
+      :imageSrc="'/discover-menu.jpg'"
+      :title="'discover our new menu'"
+      :description="'by admin  January 7th, 2020  Categories: News'"
+      />
+      <NewsPromCard 
+      :imageSrc="'/pay.jpg'"
+      :title="'we now accept square!'"
+      :description="'by admin  January 7th, 2020  Categories: News'"
+      />
+    </div>
+  </section>
+
   <!-- SECTION ABOUT -->
   <section class="about">
     <div class="left img-box">
@@ -100,10 +129,6 @@ export default {
     </div>
   </section>
 
-  <section>
-    <SliderComp :sliderData="sliderData2"/>
-  </section>
-
   <!-- SECTION MENU -->
   <section class="menu-card-container">
     <MenuCard
@@ -111,7 +136,7 @@ export default {
       :key="index"
       :menu='menu'
       :isSelected="menu.isSelected"
-      @clickCard="selectCard(index, $event)"
+      @clickCard="selectCard(index)"
 
     />
   </section>
@@ -124,7 +149,7 @@ export default {
 <style lang="scss" scoped>
 @use '../scss/main.scss' as *;
 
-.food-experience{
+section.food-experience{
   .top{
     display: flex;
     justify-content: space-between;
@@ -161,7 +186,7 @@ export default {
     margin-top: 80px;
   }
 }
-.about{
+section.about{
   display: flex;
   height: 850px;
   .left{
@@ -175,10 +200,49 @@ export default {
     width: 45%;
     background-color: $black;
   }
+  .line{
+    margin-top: 15px;
+    margin-right: 10px;
+  }
 }
-.menu-card-container{
+/* PLATE-EXAMPLE */
+section.plate-example{
+  height: 700px;
+  background-image: url('../../public/page52x.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
+  align-items: end;
+  p{
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .5);
+  }
+}
+/* NEWS-PROM */
+section {
+  padding: 50px 0px;
+  h2{
+    text-align: center;
+    font-weight: 500;
+    font-size: 2rem;
+    padding-top: 50px;
+  }
+  .line{
+    margin: 50px auto 0px;
+  }
+  .news-prom{
+  display: flex;
+  padding: 0px 250px;
+  margin: 100px 0px;
+  }
+}
+section.menu-card-container{
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
   padding: 40px;
 }
 </style>

@@ -1,6 +1,6 @@
 <script>
 import sliderData from '../data/slider';
-import TxtCard from './TxtCard.vue';
+import TxtCard from './card/TxtCard.vue';
 
 export default {
   name: 'SliderComp',

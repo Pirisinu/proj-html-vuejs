@@ -1,5 +1,5 @@
 <script>
-import ltlCardData from '../data/ltlCard.js'; 
+import ltlCardData from '../../data/ltlCard.js'; 
 
 export default {
   name: 'LtlCard',

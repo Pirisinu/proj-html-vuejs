@@ -32,7 +32,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../scss/main.scss' as *;
+@use '../../scss/main.scss' as *;
 .card-box{
   height: 100%;
   display: flex;
