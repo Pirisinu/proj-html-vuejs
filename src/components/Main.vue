@@ -7,7 +7,8 @@ import ltlCard from '../data/mainMenu.js'
 import LtlCard from './LtlCard.vue';
 import TxtCard from './TxtCard.vue';
 import MenuCard from './MenuCard.vue';
-import NewsPromCard from './NewsPromCard.vue'; 
+import NewsPromCard from './NewsPromCard.vue';
+import SliderComp from './SliderComp.vue'; 
 
 export default {
   name: 'Main',
@@ -15,7 +16,8 @@ export default {
     TxtCard,
     MenuCard,
     NewsPromCard,
-    LtlCard
+    LtlCard,
+    SliderComp
   },
   data(){
     return{
@@ -111,7 +113,7 @@ export default {
   </section>
 
   <section>
-    
+    <SliderComp/>
   </section>
 </template>
 
@@ -165,6 +167,7 @@ export default {
     }
   }
   .right{
+    padding: 60px;
     width: 45%;
     background-color: $black;
   }

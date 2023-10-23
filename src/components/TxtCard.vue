@@ -40,7 +40,7 @@ export default {
   align-items: center;
   .card{
     height: 60%;
-    width: 75%;
+    width: 70%;
     display: flex;
     .content{
       width: 100%;
@@ -66,11 +66,12 @@ export default {
       }
       .ltl-price{
         position: absolute ;
-        right: 0px;
-        top: 0px;
+        font-size: .9rem;
+        right: -20px;
+        top: 60px;
       }
       .heading{
-        font-size: 70px;
+        font-size: 50px;
         font-weight: 600;
         color: $white;
         margin: 40px 0;
