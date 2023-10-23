@@ -4,25 +4,36 @@ import mainMenu from '../data/mainMenu.js';
 import ltlCard from '../data/mainMenu.js'
 
 /* COMPONENTS */
-import LtlCard from './card/LtlCard.vue';
+/* CARD IMPORT */
 import TxtCard from './card/TxtCard.vue';
+import LtlCard from './card/LtlCard.vue';
 import MenuCard from './MenuCard.vue';
 import NewsPromCard from './card/NewsPromCard.vue';
-import SliderComp from './SliderComp.vue';
-import CriticsCardVue from './card/CriticsCard.vue';
-import FoodExperienceVue from './section/FoodExperience.vue';
+import CriticsCard from './card/CriticsCard.vue';
+/* SECTION IMPORT */
+import SectionFoodExperience from './section/SectionFoodExperience.vue';
+import SectionAboutMenu from './section/AboutMenu.vue';
+import SectionPlateImg from './section/SectionPlateImg.vue';
+import SectionAboutTakeout from './section/AboutTakeout.vue';
+import SectionNewsProm from './section/SectionNewsProm.vue';
+import SectionPlateSlider from './section/SectionPlateSlider.vue';
 
 export default {
   name: 'Main',
   components:{
+    /* CARD */
     TxtCard,
     MenuCard,
     NewsPromCard,
     LtlCard,
-    SliderComp,
-    FoodExperienceVue,
-    CriticsCardVue
-
+    CriticsCard,
+    /* SECTION */
+    SectionFoodExperience,
+    SectionAboutMenu,
+    SectionPlateImg,
+    SectionAboutTakeout,
+    SectionNewsProm,
+    SectionPlateSlider
   },
   data(){
     return{
@@ -30,10 +41,8 @@ export default {
       ltlCard
     }
   },
-  mounted(){
-    console.log(mainMenu[0]);
-  },
   methods: {
+    /* Metodo per far girare lo slider in <SectionPlateSlider /> */
     selectCard(index) {
       this.mainMenu.forEach((menu, i) => {
         menu.isSelected = i === index;
@@ -46,32 +55,11 @@ export default {
 
 <template>
   <!-- SECTION EXPERIENCE -->
-  <FoodExperienceVue />
-  
-  <!-- SECTION ABOUT -->
-  <section class="about">
-    <div class="left img-box">
-      <img src="../assets/img/slider32x.jpg" alt="img cibo">
-    </div>
-    <div class="right">
-      <TxtCard
-      class="white-card"
-        :title="'fine dining experience'"
-        :heading="'the best table in town'"
-        :description="`Pellentesque vitae viverra risus, sagittis. venenatis ridiculus sclerisque nisi urna nulla. Sit tempor a et nisl, ac felis.`"
-        :buttonText="'Explore the menu'"
-      >
-        <template v-slot:left>
-          <span class="line"></span>
-        </template>
-      </TxtCard>
-    </div>
-  </section>
-
+  <SectionFoodExperience />
+  <!-- SECTION ABOUT MENU -->
+  <SectionAboutMenu />
   <!-- SECTION IMG PLATE -->
-  <section class="plate-example">
-    <p>KUNG PAO CHICKEN - $32</p>
-  </section>
+  <SectionPlateImg />
 
   <!-- SECTION CRITICTS -->
   <section class="critics">
@@ -102,25 +90,8 @@ export default {
     </div>
   </section>
 
-  <!-- SECTION ABOUT -->
-  <section class="about">
-    <div class="left img-box">
-      <img src="../assets/img/slider72x-scaled.jpg" alt="img cibo">
-    </div>
-    <div class="right">
-      <TxtCard
-      class="white-card"
-        :title="'enjoy your meal at home'"
-        :heading="'takeout now available'"
-        :description="`Pellentesque vitae viverra risus, sagittis. venenatis ridiculus sclerisque nisi urna nulla. Sit tempor a et nisl, ac felis.`"
-        :buttonText="'Explore the menu'"
-      >
-        <template v-slot:left>
-          <span class="line"></span>
-        </template>
-      </TxtCard>
-    </div>
-  </section>
+  <!-- SECTION ABOUT TAKEOUT -->
+  <SectionAboutTakeout />
 
   <!-- SECTION MENU -->
   <section class="menu-card-container">
@@ -134,49 +105,13 @@ export default {
     />
   </section>
 
-  <section>
-    <SliderComp :sliderData="sliderData"/>
-  </section>
+  <!-- SECTION PLATE SLIDER -->
+  <SectionPlateSlider />
 </template>
 
 <style lang="scss" scoped>
 @use '../scss/main.scss' as *;
 
-section.about{
-  display: flex;
-  height: 850px;
-  .left{
-    width: 55%;
-    img{
-      object-fit: cover;
-    }
-  }
-  .right{
-    padding: 60px;
-    width: 45%;
-    background-color: $black;
-  }
-  .line{
-    margin-top: 15px;
-    margin-right: 10px;
-  }
-}
-/* PLATE-EXAMPLE */
-section.plate-example{
-  height: 700px;
-  background-image: url('../../public/page52x.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  p{
-    color: white;
-    padding: 15px;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, .5);
-  }
-}
 /* NEWS-PROM */
 section {
   padding: 50px 0px;
