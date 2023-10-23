@@ -94,6 +94,12 @@ header{
 
       .logo-header{
         margin-left: 70px;
+        width: 330px;
+        height: 70px;
+
+        img{
+          object-fit: cover;
+        }
       }
     }
     .right{

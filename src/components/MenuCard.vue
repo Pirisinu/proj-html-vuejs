@@ -47,22 +47,25 @@ export default {
     &.selected{
       border: 2px solid black;
       margin: 0px 0px 80px;
+      color: white;
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3){
+      background-size: cover;
+      background-position: center;
     }
     &:nth-child(1) {
     background-image: url('../assets/img/mm-1.jpg');
-    background-size: cover;
-    background-position: center;
-    }&:nth-child(2) {
-    background-image: url('../assets/img/mm-2.jpg');
-    background-size: cover;
-    background-position: center;
-    }&:nth-child(3) {
+    }
+    &:nth-child(2) {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('../assets/img/misc22x.jpg');
+    }
+    &:nth-child(3) {
     background-image: url('../assets/img/mm-3.jpg');
-    background-size: cover;
-    background-position: center;
     }
     &:not(.selected) {
     background-image: none;
   }
-  }
+}
 </style>

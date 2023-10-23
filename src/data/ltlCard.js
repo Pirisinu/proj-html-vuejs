@@ -1,23 +1,25 @@
-const ltlCard [
+const ltlCard = [
   {
-    imageSrc:'ciao'
-    imageAlt:'ciao'
-    title:'THE BEST IN TOWN'
-    content:'ciao'
-    buttonText:'EXPLORE THE MENU' 
-  }
+    imageSrc: '/sushi-1.png',
+    imageAlt: 'img1',
+    title: 'THE BEST IN TOWN',
+    content: 'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor. Cum sociis natoque penat code vel met.',
+    buttonText: 'EXPLORE THE MENU'
+  },
   {
-    imageSrc:'ciao'
-    imageAlt:'ciao'
-    title:'PERFECT FOR GROUPS'
-    content:'ciao'
-    buttonText:'MAKE A RESERVATION' 
-  }
+    imageSrc: '/sushi-2.png',
+    imageAlt: 'img2',
+    title: 'PERFECT FOR GROUPS',
+    content: 'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor. Cum sociis natoque penat code vel met.',
+    buttonText: 'MAKE A RESERVATION'
+  },
   {
-    imageSrc:'ciao'
-    imageAlt:'ciao'
-    title:'FRESH PRODUCE EVERYDAY'
-    content:'ciao'
-    buttonText:'LEARN MORE ABOUT US' 
+    imageSrc: '/sushi-3.png',
+    imageAlt: 'img3',
+    title: 'FRESH PRODUCE EVERYDAY',
+    content: 'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor. Cum sociis natoque penat code vel met.',
+    buttonText: 'LEARN MORE ABOUT US'
   }
-]
+];
+
+export default ltlCard;

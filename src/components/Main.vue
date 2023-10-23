@@ -39,6 +39,7 @@ export default {
 
 
 <template>
+  <!-- SECTION EXPERIENCE -->
   <section class="container food-experience">
     <div class="top">
       <div class="content">
@@ -52,18 +53,53 @@ export default {
       </div>
     </div>
 
-    <div>
-      <LtlCard
-      v-for='card in ltlCard'
-      :key='title'
-      :title="'ciao'" 
-      :content="'ciao'" 
-      :buttonText="'ciao'" 
-      />
+    <div class="bottom">
+      <LtlCard/>
     </div>
   </section>
-  <section class="">img+card</section>
-  <section class="card-container">
+  
+  <!-- SECTION ABOUT -->
+  <section class="about">
+    <div class="left img-box">
+      <img src="../assets/img/slider32x.jpg" alt="img cibo">
+    </div>
+    <div class="right">
+      <TxtCard
+      class="white-card"
+        :title="'fine dining experience'"
+        :heading="'the best table in town'"
+        :description="`Pellentesque vitae viverra risus, sagittis. venenatis ridiculus sclerisque nisi urna nulla. Sit tempor a et nisl, ac felis.`"
+        :buttonText="'Explore the menu'"
+      >
+        <template v-slot:left>
+          <span class="line"></span>
+        </template>
+      </TxtCard>
+    </div>
+  </section>
+
+  <!-- SECTION ABOUT -->
+  <section class="about">
+    <div class="left img-box">
+      <img src="../assets/img/slider72x-scaled.jpg" alt="img cibo">
+    </div>
+    <div class="right">
+      <TxtCard
+      class="white-card"
+        :title="'enjoy your meal at home'"
+        :heading="'takeout now available'"
+        :description="`Pellentesque vitae viverra risus, sagittis. venenatis ridiculus sclerisque nisi urna nulla. Sit tempor a et nisl, ac felis.`"
+        :buttonText="'Explore the menu'"
+      >
+        <template v-slot:left>
+          <span class="line"></span>
+        </template>
+      </TxtCard>
+    </div>
+  </section>
+
+  <!-- SECTION MENU -->
+  <section class="menu-card-container">
     <MenuCard
       v-for="(menu, index) in mainMenu"
       :key="index"
@@ -74,6 +110,9 @@ export default {
     />
   </section>
 
+  <section>
+    
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -91,7 +130,6 @@ export default {
       flex-direction: column;
       justify-content: space-between;
       
-      p{}
       h3{
         font-size: 2.5rem;
         text-transform: uppercase;
@@ -113,8 +151,25 @@ export default {
       }
     }
   }
+  .bottom{
+    margin-top: 80px;
+  }
 }
-.card-container{
+.about{
+  display: flex;
+  height: 850px;
+  .left{
+    width: 55%;
+    img{
+      object-fit: cover;
+    }
+  }
+  .right{
+    width: 45%;
+    background-color: $black;
+  }
+}
+.menu-card-container{
   display: flex;
   justify-content: center;
   padding: 40px;

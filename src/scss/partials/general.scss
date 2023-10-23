@@ -34,3 +34,20 @@ ul{
 .white-card{
   color: $grey;
 }
+.light-button{
+  background-color: $white;
+  border: 1px solid $grey;
+  margin: 0 auto;
+  font-weight: 600;
+  color: grey;
+  padding: 8px 25px;
+
+  &:hover{
+    background-color: grey;
+    color: $white;
+  }
+}
+img{
+  width: 100%;
+  height: 100%;
+}

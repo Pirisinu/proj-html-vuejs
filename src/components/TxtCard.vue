@@ -4,6 +4,7 @@ export default {
   props:{
     imageSrc: String,
     title: String,
+    ltlPrice: String,
     heading: String,
     description: String,
     buttonText: String
@@ -20,6 +21,7 @@ export default {
       <div class="content">
         <img :src="imageSrc" alt="Card Image" v-if="imageSrc" />
         <h3 class="title">{{ title }}</h3>
+        <span class="ltl-price">{{ ltlPrice }}</span>
         <h1 class="heading">{{ heading }}</h1>
         <p class="description">{{ description }}</p>
         <button @click="buttonClick">{{ buttonText }}</button>
@@ -43,18 +45,29 @@ export default {
     .content{
       width: 100%;
       color: $grey;
+      position: relative;
       
       button{
         color: white;
         font-size: 18px;
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.288);
         border: 1px solid gray;
         padding: 7px 27px;
         margin: 80px 0 0;
+
+        &:hover{
+          background-color: $grey;
+          color: $black;
+        }
       }
       .title{
         color: rgb(161, 161, 161);
         font-weight: 300;
+      }
+      .ltl-price{
+        position: absolute ;
+        right: 0px;
+        top: 0px;
       }
       .heading{
         font-size: 70px;
