@@ -1,6 +1,10 @@
 <script>
+import LtlCard from '../card/LtlCard.vue';
 export default {
-  name: 'SectionFoodExperience'
+  name: 'SectionFoodExperience',
+  components:{
+    LtlCard
+  }
 }
 </script>
 

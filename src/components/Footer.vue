@@ -90,7 +90,7 @@ footer{
           color: black;
           i{
             font-size: 1.5rem;
-            line-height: 58px;
+            line-height: 50px;
           }
         }
       }

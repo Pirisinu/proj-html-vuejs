@@ -50,7 +50,7 @@ h2{
   margin-top: 60px;
 }
 .line{
-  margin: 20px auto;
+  margin: 20px auto 60px;
 }
 .container-card{
   width: 70%;
