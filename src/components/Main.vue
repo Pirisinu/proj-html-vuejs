@@ -12,10 +12,10 @@ import NewsPromCard from './card/NewsPromCard.vue';
 import CriticsCard from './card/CriticsCard.vue';
 /* SECTION IMPORT */
 import SectionFoodExperience from './section/SectionFoodExperience.vue';
-import SectionAboutMenu from './section/AboutMenu.vue';
+import SectionAboutMenu from './section/SectionAboutMenu.vue';
 import SectionCritics from './section/SectionCritics.vue';
 import SectionPlateImg from './section/SectionPlateImg.vue';
-import SectionAboutTakeout from './section/AboutTakeout.vue';
+import SectionAboutTakeout from './section/SectionAboutTakeout.vue';
 import SectionNewsProm from './section/SectionNewsProm.vue';
 import SectionPlateSlider from './section/SectionPlateSlider.vue';
 
@@ -65,28 +65,7 @@ export default {
   <!-- SECTION IMG PLATE -->
   <SectionPlateImg />
   <!-- SECTION NEWS PROM -->
-  <section>
-    <h2>Latest news & promotions</h2>
-    <div class="line"></div>
-
-    <div class="news-prom">
-      <NewsPromCard 
-      :imageSrc="'/img-caffe.jpg'"
-      :title="'the best coffee in town'"
-      :description="'by admin  January 7th, 2020  Categories: News'"
-      />
-      <NewsPromCard 
-      :imageSrc="'/discover-menu.jpg'"
-      :title="'discover our new menu'"
-      :description="'by admin  January 7th, 2020  Categories: News'"
-      />
-      <NewsPromCard 
-      :imageSrc="'/pay.jpg'"
-      :title="'we now accept square!'"
-      :description="'by admin  January 7th, 2020  Categories: News'"
-      />
-    </div>
-  </section>
+  <SectionNewsProm />
 
   <!-- SECTION ABOUT TAKEOUT -->
   <SectionAboutTakeout />

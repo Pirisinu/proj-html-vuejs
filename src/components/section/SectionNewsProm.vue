@@ -1,6 +1,10 @@
 <script>
+import NewsPromCard from '../card/NewsPromCard.vue';
 export default {
-  name: 'SectionNewsProm'
+  name: 'SectionNewsProm',
+  components:{
+    NewsPromCard
+  }
 }
 </script>
 

@@ -1,7 +1,7 @@
 <script>
 import TxtCard from '../card/TxtCard.vue';
 export default {
-  name: 'AboutMenu',
+  name: 'SectionAboutTakeout',
   components:{
     TxtCard
   }
@@ -9,17 +9,17 @@ export default {
 </script>
 
 <template>
-  <section class="about">
+  <section class="about takeout">
     <div class="left img-box">
-      <img src="../../assets/img/slider32x.jpg" alt="img cibo">
+      <img src="../../assets/img/slider72x-scaled.jpg" alt="img cibo">
     </div>
     <div class="right">
       <TxtCard
       class="white-card"
-        :title="'fine dining experience'"
-        :heading="'the best table in town'"
+        :title="'enjoy your meal at home'"
+        :heading="'takeout now available'"
         :description="`Pellentesque vitae viverra risus, sagittis. venenatis ridiculus sclerisque nisi urna nulla. Sit tempor a et nisl, ac felis.`"
-        :buttonText="'Explore the menu'"
+        :buttonText="'view takeout menu'"
       >
         <template v-slot:left>
           <span class="line"></span>
